@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Таблица</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="table.css">
+    <script>
+        function addRow(event) {
+            event.preventDefault();
+
+            const id = document.getElementById("id").value;
+            const fio = document.getElementById("fio").value;
+            const bookNumber = document.getElementById("bookNumber").value;
+            const group = document.getElementById("group").value;
+            const gender = document.getElementById("gender").value;
+            const age = document.getElementById("age").value;
+            const admission = document.getElementById("admission").value;
+            const direction = document.getElementById("direction").value;
+
+            const table = document.querySelector("tbody");
+            const newRow = document.createElement("tr");
+
+            newRow.innerHTML = `
+                <td>${id}</td>
+                <td>${fio}</td>
+                <td>${bookNumber}</td>
+                <td>${group}</td>
+                <td>${gender}</td>
+                <td>${age}</td>
+                <td>${admission}</td>
+                <td>${direction}</td>
+            `;
+
+            table.appendChild(newRow);
+
+            document.getElementById("addRowForm").reset();
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <a href="laba.html">Основная страница</a>
+        <a href="page2.html">Позиционирование элементов</a>
+        <a href="page3.html">Таблица</a>
+    </div>
+    <div class="content">
+        <form id="addRowForm" onsubmit="addRow(event)">
+            <h2>Добавить запись в таблицу</h2>
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" required><br>
+
+            <label for="fio">ФИО:</label>
+            <input type="text" id="fio" name="fio" required><br>
+
+            <label for="bookNumber">Зачетная книжка:</label>
+            <input type="text" id="bookNumber" name="bookNumber" required><br>
+
+            <label for="group">Группа:</label>
+            <input type="text" id="group" name="group" required><br>
+
+            <label for="gender">Пол:</label>
+            <input type="text" id="gender" name="gender" required><br>
+
+            <label for="age">Возраст:</label>
+            <input type="number" id="age" name="age" required><br>
+
+            <label for="admission">Форма поступления:</label>
+            <input type="text" id="admission" name="admission" required><br>
+
+            <label for="direction">Направление:</label>
+            <input type="text" id="direction" name="direction" required><br>
+
+            <button type="submit">Добавить</button>
+        </form>
+        <table>
+            <caption>Список студентов</caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ФИО</th>
+                    <th>Зачетная книжка</th>
+                    <th>Группа</th>
+                    <th>Пол</th>
+                    <th>Возраст</th>
+                    <th>Форма поступления</th>
+                    <th>Направление</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Волков Максим Анатольевич</td>
+                    <td>777777</td>
+                    <td>6205</td>
+                    <td>М</td>
+                    <td>19</td>
+                    <td>Бюджет</td>
+                    <td>ИВТ</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Александров Артем Ильич</td>
+                    <td>228228</td>
+                    <td>1337</td>
+                    <td>М</td>
+                    <td>77</td>
+                    <td>Блатная</td>
+                    <td>Суетология</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ермаков Максим Ильич</td>
+                    <td>123123</td>
+                    <td>6205</td>
+                    <td>М</td>
+                    <td>12</td>
+                    <td>Контракт</td>
+                    <td>Фитология</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Басов Антон Андреевич</td>
+                    <td>880014</td>
+                    <td>6205</td>
+                    <td>М</td>
+                    <td>26</td>
+                    <td>Платная</td>
+                    <td>Ботаника</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Зиннатулин Рамиль Аскарович</td>
+                    <td>000000</td>
+                    <td>138</td>
+                    <td>М</td>
+                    <td>11</td>
+                    <td>Контракт</td>
+                    <td>Урология</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

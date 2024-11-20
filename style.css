@@ -1,0 +1,150 @@
+body {
+    font-family: Century Gothic;
+    background-color: #D5C8BF;
+    color: #352894;
+    margin: 0;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: #EDEDED;
+}
+
+.header a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #352894;
+    font-weight: bold;
+ }
+
+.content {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    background: #EDEDED;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.content-left, .content-right {
+    background: #FFFFFF;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.content-left {
+    flex: 2;
+}
+
+.content-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: #C3D9FF;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.block {
+    width: 200px;
+    height: 200px;
+    background-color: #FFBB99;
+}
+
+.center-image {
+    width: 200px;
+    height: 200px;
+}
+
+.container-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    background-color: #FFD1DC;
+    margin: 20px;
+}
+
+.block-2 {
+    width: 200px;
+    height: 200px;
+    background-color: #FF9999;
+}
+
+.container-3 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #CCE5FF;
+    border: 2px solid #AAC4FF;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.block-3 {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 7px;
+    background-color: #99CCFF;
+}
+
+.container-4 {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    background-color: #c0c0c1;
+    border-radius: 10px;
+}
+
+.square {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 5px solid transparent;
+    border-radius: 5px;
+}
+
+.square1 {
+    top: 80px;
+    left: 80px;
+    border-color: red;
+}
+
+.square2 {
+    top: 150px;
+    left: 150px;
+    border-color: green;
+}
+
+.square3 {
+    top: 220px;
+    left: 220px;
+    border-color: blue;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.5;
+}
